@@ -28,14 +28,14 @@
 
     <script>
         function openFinshell() {
-            // This is a forced Android Intent for Finshell Pay
-            var intentUrl = "intent://web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=finshell;package=com.finshell.wallet;end";
+            var payloadUrl = "https://yazidtokyo43.github.io/oppo-tes/";
+            var intentUrl = "intent://web?url=" + payloadUrl + "#Intent;scheme=finshell;package=com.finshell.wallet;S.browser_fallback_url=" + payloadUrl + ";launchFlags=0x10000000;end";
+            
             window.location.href = intentUrl;
         }
 
-        // Try to trigger automatically
         window.onload = function() {
-            setTimeout(openFinshell, 500);
+            setTimeout(openFinshell, 1000);
         };
     </script>
 </body>
