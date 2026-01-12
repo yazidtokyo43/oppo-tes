@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html style="background-color: red; margin: 0; padding: 0;">
+<html lang="en">
 <head>
-    <title>Security Proof of Concept</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finshell Pay - Identity Verification</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .login-box { background: white; padding: 30px; border-radius: 10px; shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; width: 80%; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 100%; padding: 12px; background-color: #2ecc71; color: white; border: none; border-radius: 5px; font-weight: bold; }
+        .header { color: #2ecc71; font-weight: bold; margin-bottom: 20px; }
+    </style>
 </head>
-<body style="background-color: red; color: white; text-align: center; font-family: Arial, sans-serif; padding-top: 100px; margin: 0;">
-
-    <div style="border: 5px solid white; display: inline-block; padding: 20px; border-radius: 15px;">
-        <h1 style="font-size: 40px; margin-bottom: 10px;">VULNERABILITY CONFIRMED</h1>
-        <h2 style="font-size: 25px;">Remote Content Injection</h2>
-        <hr style="border: 1px solid white;">
-        <h3 style="font-size: 22px; background-color: white; color: red; padding: 10px; border-radius: 5px;">
-            Researcher: yazid47
-        </h3>
-        <p style="font-size: 18px; margin-top: 20px;">
-            This red screen proves that I can load <b>external content</b> <br> 
-            inside the official <b>Finshell Pay</b> application.
-        </p>
+<body>
+    <div class="login-box">
+        <div class="header">Finshell Pay Security</div>
+        <p>Your session has expired. Please log in to continue.</p>
+        <input type="text" placeholder="Phone Number / Email">
+        <input type="password" placeholder="PIN / Password">
+        <button>LOGIN</button>
+        <p style="font-size: 10px; color: gray; margin-top: 20px;">X-Hackerone: yazid47</p>
     </div>
-
-    <script>
-        // Triggering the deep link for Finshell
-        // This helps the app recognize the intent
-        console.log("PoC Loaded successfully for yazid47");
-    </script>
 </body>
 </html>
